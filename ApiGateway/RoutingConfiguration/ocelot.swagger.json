@@ -1,0 +1,14 @@
+[
+  {
+    "DownstreamPathTemplate": "/swagger/v1/swagger.json",
+    "DownstreamScheme": "http",
+    "DownstreamHostAndPorts": [
+      {
+        "Host": "localhost",
+        "Port": 7060
+      }
+    ],
+    "UpstreamPathTemplate": "/swagger/authentication_service",
+    "UpstreamHttpMethod": ["GET"]
+  }
+]
