@@ -1,0 +1,38 @@
+[
+  {
+    "UpstreamPathTemplate": "/auth/{everything}",
+    "UpstreamHttpMethod": ["GET", "POST", "PUT", "DELETE"],
+    "DownstreamPathTemplate": "/{everything}",
+    "DownstreamScheme": "http",
+    "DownstreamHostAndPorts": [
+      {
+        "Host": "localhost",
+        "Port": 7060
+      }
+    ]
+  },
+  {
+    "UpstreamPathTemplate": "/oauth/{everything}",
+    "UpstreamHttpMethod": ["GET", "POST", "PUT", "DELETE"],
+    "DownstreamPathTemplate": "/oauth/{everything}",
+    "DownstreamScheme": "http",
+    "DownstreamHostAndPorts": [
+      {
+        "Host": "localhost",
+        "Port": 5128
+      }
+    ]
+  },
+  {
+    "UpstreamPathTemplate": "/api/{everything}",
+    "UpstreamHttpMethod": ["GET", "POST", "PUT", "DELETE"],
+    "DownstreamPathTemplate": "/api/{everything}",
+    "DownstreamScheme": "http",
+    "DownstreamHostAndPorts": [
+      {
+        "Host": "localhost",
+        "Port": 5001
+      }
+    ]
+  }
+]

@@ -1,0 +1,21 @@
+services:
+
+  postgres:
+    image: postgres
+    container_name: postgres_savings_db
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: "${DOCKER_POSTGRES_PASSWORD}"
+      POSTGRES_DB: "${DOCKER_POSTGRES_DATABASE}"
+      POSTGRES_USER: "${DOCKER_POSTGRES_USER}"
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    networks:
+      - app-net
+volumes:
+  db_data:
+networks:
+  app-net:
+    external: true
