@@ -10,5 +10,28 @@
     ],
     "UpstreamPathTemplate": "/swagger/authentication_service",
     "UpstreamHttpMethod": ["GET"]
-  }
+  },
+  {
+    "DownstreamPathTemplate": "/swagger/v1/swagger.json",
+    "DownstreamScheme": "http",
+    "DownstreamHostAndPorts": [
+      {
+        "Host": "localhost",
+        "Port": 5128
+      }
+    ],
+    "UpstreamPathTemplate": "/swagger/banking_system",
+    "UpstreamHttpMethod": ["GET"]
+  },{
+  "DownstreamPathTemplate": "/swagger/v1/swagger.json",
+  "DownstreamScheme": "http",
+  "DownstreamHostAndPorts": [
+    {
+      "Host": "localhost",
+      "Port": 5001
+    }
+  ],
+  "UpstreamPathTemplate": "/swagger/oauth_service",
+  "UpstreamHttpMethod": ["GET"]
+}
 ]

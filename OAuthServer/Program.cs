@@ -11,7 +11,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddAuthentication("cookie")
     .AddCookie("cookie", o =>
     {
-        o.LoginPath = "/login";
+        o.LoginPath = "oauth/login";
     });
 
 builder.Services.AddAuthorization();
@@ -26,13 +26,13 @@ if (app.Environment.IsDevelopment())
 }
 
 
-app.MapGet("/login", (HttpContext ctx) =>
+app.MapGet("oauth/login", (HttpContext ctx) =>
 {
     
     
     return Results.Redirect($"http://localhost:7072/signin"+ctx.Request.Query["returnUrl"]);
 });
-app.MapPost("/login", Login.Handler);
+app.MapPost("oauth/login", Login.Handler);
 app.MapGet("/oauth/authorize", AuthorizationEndpoint.Handle).RequireAuthorization();
 app.MapPost("/oauth/token", TokenEndpoint.Handle);
 
