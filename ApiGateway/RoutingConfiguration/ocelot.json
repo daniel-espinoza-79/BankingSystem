@@ -4,7 +4,7 @@
   },
   "Routes": [
     {
-      "UpstreamPathTemplate": "/api/auth/{everything}",
+      "UpstreamPathTemplate": "/{everything}",
       "UpstreamHttpMethod": [
         "GET",
         "POST",

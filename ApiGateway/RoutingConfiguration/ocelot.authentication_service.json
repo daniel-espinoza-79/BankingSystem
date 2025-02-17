@@ -1,6 +1,6 @@
 [
   {
-    "UpstreamPathTemplate": "/api/auth/{everything}",
+    "UpstreamPathTemplate": "/{everything}",
     "UpstreamHttpMethod": ["GET", "POST", "PUT", "DELETE"],
     "DownstreamPathTemplate": "/{everything}",
     "DownstreamScheme": "http",
